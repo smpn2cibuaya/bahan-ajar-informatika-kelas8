@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bahan Ajar Informatika Kelas 8</title>
+<style>
+* {box-sizing:border-box}
+body {
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f0f4f8;
+  color:#243247;
+}
+header {
+  background:linear-gradient(120deg,#123c69,#2878b5);
+  color:white;
+  padding:35px 20px;
+  text-align:center;
+}
+header h1 {margin:0 0 10px}
+nav {
+  background:#fff;
+  padding:12px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+  position:sticky;
+  top:0;
+  box-shadow:0 2px 8px #0002;
+  z-index:5;
+}
+button {
+  border:0;
+  padding:11px 17px;
+  border-radius:8px;
+  background:#2878b5;
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
+}
+button:hover {background:#174e7c}
+nav button {background:#e6f1fa;color:#174e7c}
+nav button:hover {background:#c8e3f7}
+.container {
+  max-width:950px;
+  margin:25px auto;
+  padding:0 15px;
+}
+.page {
+  display:none;
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 4px 15px #0001;
+  line-height:1.7;
+}
+.page.active {display:block}
+h2 {color:#17649c}
+h3 {color:#2878b5}
+.card {
+  background:#eef7ff;
+  border-left:5px solid #2878b5;
+  padding:15px;
+  border-radius:8px;
+  margin:15px 0;
+}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+}
+.item {
+  background:#f4f8fc;
+  padding:18px;
+  text-align:center;
+  border-radius:12px;
+}
+.item .emoji {font-size:42px}
+.item h3 {margin:8px 0}
+li {margin-bottom:8px}
+.question {
+  border:1px solid #dce5ed;
+  border-radius:10px;
+  padding:15px;
+  margin:18px 0;
+}
+.question label {
+  display:block;
+  padding:9px;
+  margin:5px 0;
+  background:#f1f5f9;
+  border-radius:6px;
+  cursor:pointer;
+}
+.question label:hover {background:#dceefa}
+.result {
+  background:#e8f7ed;
+  padding:20px;
+  border-radius:10px;
+  margin-top:20px;
+  display:none;
+}
+footer {
+  text-align:center;
+  padding:25px;
+  color:#64748b;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>INFORMATIKA KELAS VIII</h1>
+  <h2 style="color:white">BAB 3: SISTEM KOMPUTER</h2>
+  <p>Mengenal Hardware, Software, dan Brainware</p>
+</header>
+
+<nav>
+  <button onclick="showPage('home')">Beranda</button>
+  <button onclick="showPage('materi')">Materi</button>
+  <button onclick="showPage('hardware')">Hardware</button>
+  <button onclick="showPage('software')">Software</button>
+  <button onclick="showPage('brainware')">Brainware</button>
+  <button onclick="showPage('kuis')">Kuis</button>
+</nav>
+
+<div class="container">
+
+<!-- BERANDA -->
+<section id="home" class="page active">
+  <h2>Selamat Datang!</h2>
+  <p>Selamat belajar Informatika! Pada bab ini kita akan mempelajari tentang sistem komputer dan bagian-bagian yang menyusunnya.</p>
+
+  <div class="card">
+    <h3>Tujuan Pembelajaran</h3>
+    Setelah mempelajari materi ini, peserta didik mampu:
+    <ol>
+      <li>Menjelaskan pengertian sistem komputer.</li>
+      <li>Mengidentifikasi perangkat keras (hardware).</li>
+      <li>Menjelaskan fungsi perangkat lunak (software).</li>
+      <li>Mengidentifikasi peran pengguna komputer (brainware).</li>
+    </ol>
+  </div>
+
+  <h3>Apa Itu Sistem Komputer?</h3>
+  <p>Sistem komputer adalah sekumpulan komponen yang saling bekerja sama untuk menerima data, mengolah data, menyimpan data, dan menghasilkan informasi.</p>
+
+  <div class="grid">
+    <div class="item">
+      <div class="emoji">🖥️</div>
+      <h3>Hardware</h3>
+      Perangkat keras komputer.
+    </div>
+    <div class="item">
+      <div class="emoji">💿</div>
+      <h3>Software</h3>
+      Perangkat lunak komputer.
+    </div>
+    <div class="item">
+      <div class="emoji">👨‍💻</div>
+      <h3>Brainware</h3>
+      Manusia sebagai pengguna.
+    </div>
+  </div>
+  <br>
+  <button onclick="showPage('materi')">Mulai Belajar →</button>
+</section>
+
+<!-- MATERI -->
+<section id="materi" class="page">
+  <h2>Pengertian Sistem Komputer</h2>
+  <p>Sistem komputer merupakan gabungan dari tiga komponen utama yang saling berhubungan, yaitu hardware, software, dan brainware.</p>
+
+  <div class="card">
+    <b>Contoh sederhana:</b>
+    Ketika kita mengetik tugas menggunakan komputer:
+    <ul>
+      <li>Keyboard digunakan untuk memasukkan tulisan (hardware).</li>
+      <li>Aplikasi Microsoft Word digunakan untuk mengetik (software).</li>
+      <li>Siswa yang mengetik tugas disebut pengguna (brainware).</li>
+    </ul>
+  </div>
+
+  <h3>Bagaimana Komputer Bekerja?</h3>
+  <ol>
+    <li>Input: komputer menerima data.</li>
+    <li>Process: komputer mengolah data.</li>
+    <li>Output: komputer menampilkan hasil.</li>
+    <li>Storage: komputer menyimpan data.</li>
+  </ol>
+</section>
+
+<!-- HARDWARE -->
+<section id="hardware" class="page">
+  <h2>1. Hardware (Perangkat Keras)</h2>
+  <p>Hardware adalah seluruh bagian fisik komputer yang dapat dilihat dan disentuh.</p>
+
+  <h3>Contoh Hardware</h3>
+  <div class="grid">
+    <div class="item"><div class="emoji">⌨️</div><h3>Keyboard</h3>Memasukkan huruf, angka, dan simbol.</div>
+    <div class="item"><div class="emoji">🖱️</div><h3>Mouse</h3>Menggerakkan pointer dan memilih menu.</div>
+    <div class="item"><div class="emoji">🖥️</div><h3>Monitor</h3>Menampilkan gambar dan informasi.</div>
+    <div class="item"><div class="emoji">🖨️</div><h3>Printer</h3>Mencetak dokumen ke kertas.</div>
+    <div class="item"><div class="emoji">🔊</div><h3>Speaker</h3>Mengeluarkan suara.</div>
+    <div class="item"><div class="emoji">💾</div><h3>Hard Disk</h3>Menyimpan data dan file.</div>
+    <div class="item"><div class="emoji">🧠</div><h3>Processor</h3>Mengolah instruksi dan data.</div>
+    <div class="item"><div class="emoji">📷</div><h3>Webcam</h3>Mengambil gambar dan video.</div>
+  </div>
+
+  <div class="card">
+    <b>Kesimpulan:</b> Hardware merupakan bagian komputer yang memiliki bentuk fisik.
+  </div>
+</section>
+
+<!-- SOFTWARE -->
+<section id="software" class="page">
+  <h2>2. Software (Perangkat Lunak)</h2>
+  <p>Software adalah kumpulan program atau instruksi yang digunakan untuk menjalankan komputer. Software tidak dapat disentuh secara fisik.</p>
+
+  <h3>Contoh Software</h3>
+  <div class="grid">
+    <div class="item"><div class="emoji">🪟</div><h3>Windows</h3>Sistem operasi komputer.</div>
+    <div class="item"><div class="emoji">🐧</div><h3>Linux</h3>Sistem operasi komputer.</div>
+    <div class="item"><div class="emoji">📝</div><h3>Microsoft Word</h3>Membuat dan mengedit dokumen.</div>
+    <div class="item"><div class="emoji">📊</div><h3>Microsoft Excel</h3>Mengolah angka dan tabel.</div>
+    <div class="item"><div class="emoji">🌐</div><h3>Google Chrome</h3>Menjelajahi internet.</div>
+    <div class="item"><div class="emoji">🎨</div><h3>Paint</h3>Menggambar dan mengedit gambar sederhana.</div>
+  </div>
+
+  <div class="card">
+    <b>Kesimpulan:</b> Software merupakan program yang memberikan perintah kepada komputer agar dapat bekerja.
+  </div>
+</section>
+
+<!-- BRAINWARE -->
+<section id="brainware" class="page">
+  <h2>3. Brainware (Pengguna Komputer)</h2>
+  <p>Brainware adalah manusia yang menggunakan, mengoperasikan, mengelola, atau mengembangkan sistem komputer.</p>
+
+  <h3>Contoh Brainware</h3>
+  <div class="grid">
+    <div class="item"><div class="emoji">👨‍💻</div><h3>Programmer</h3>Membuat dan mengembangkan program komputer.</div>
+    <div class="item"><div class="emoji">🧑‍🏫</div><h3>Operator</h3>Mengoperasikan komputer untuk pekerjaan tertentu.</div>
+    <div class="item"><div class="emoji">🧑‍🔧</div><h3>Teknisi</h3>Memperbaiki dan merawat perangkat komputer.</div>
+    <div class="item"><div class="emoji">👩‍💼</div><h3>Administrator</h3>Mengelola sistem dan data komputer.</div>
+    <div class="item"><div class="emoji">🧑‍🎓</div><h3>Pengguna</h3>Menggunakan komputer untuk belajar dan bekerja.</div>
+  </div>
+
+  <div class="card">
+    <b>Kesimpulan:</b> Brainware adalah manusia yang berperan dalam penggunaan dan pengelolaan komputer.
+  </div>
+</section>
+
+<!-- KUIS -->
+<section id="kuis" class="page">
+  <h2>🎯 Kuis Sistem Komputer</h2>
+  <p>Jawablah 10 pertanyaan berikut dengan benar!</p>
+
+  <form id="quizForm"></form>
+  <button onclick="checkAnswer()">Periksa Jawaban</button>
+
+  <div id="result" class="result"></div>
+  <button onclick="resetQuiz()" style="margin-top:12px">Ulangi Kuis</button>
+</section>
+
+</div>
+
+<footer>
+  <p>Bahan Ajar Informatika Kelas VIII</p>
+  <p>Bab 3 - Sistem Komputer</p>
+</footer>
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => {
+    p.classList.remove('active');
+  });
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+
+const questions = [
+  {
+    q:"Apa yang dimaksud dengan sistem komputer?",
+    a:["Sekumpulan komponen yang bekerja sama mengolah data","Alat untuk mencetak kertas","Program untuk menggambar","Alat untuk bermain game"],
+    c:0,
+    e:"Sistem komputer terdiri dari komponen yang bekerja sama mengolah data menjadi informasi."
+  },
+  {
+    q:"Bagian komputer yang dapat disentuh disebut...",
+    a:["Software","Brainware","Hardware","Internet"],
+    c:2,
+    e:"Hardware adalah perangkat keras yang memiliki bentuk fisik."
+  },
+  {
+    q:"Manakah yang termasuk perangkat input?",
+    a:["Monitor","Keyboard","Speaker","Printer"],
+    c:1,
+    e:"Keyboard digunakan untuk memasukkan data ke komputer."
+  },
+  {
+    q:"Perangkat yang berfungsi menampilkan gambar adalah...",
+    a:["Mouse","Printer","Monitor","Keyboard"],
+    c:2,
+    e:"Monitor merupakan perangkat output yang menampilkan informasi."
+  },
+  {
+    q:"Microsoft Word termasuk jenis...",
+    a:["Hardware","Software","Brainware","Perangkat input"],
+    c:1,
+    e:"Microsoft Word adalah perangkat lunak untuk mengolah dokumen."
+  },
+  {
+    q:"Orang yang menggunakan komputer disebut...",
+    a:["Hardware","Software","Brainware","Processor"],
+    c:2,
+    e:"Brainware adalah manusia yang menggunakan atau mengelola komputer."
+  },
+  {
+    q:"Otak utama yang mengolah instruksi komputer adalah...",
+    a:["Monitor","Processor","Mouse","Speaker"],
+    c:1,
+    e:"Processor bertugas menjalankan instruksi dan mengolah data."
+  },
+  {
+    q:"Contoh sistem operasi adalah...",
+    a:["Windows","Keyboard","Printer","Mouse"],
+    c:0,
+    e:"Windows merupakan salah satu sistem operasi komputer."
+  },
+  {
+    q:"Alat untuk mencetak dokumen adalah...",
+    a:["Monitor","Scanner","Printer","Speaker"],
+    c:2,
+    e:"Printer mencetak dokumen digital ke media kertas."
+  },
+  {
+    q:"Orang yang bertugas memperbaiki komputer disebut...",
+    a:["Programmer","Teknisi","Pengguna","Penulis"],
+    c:1,
+    e:"Teknisi bertugas memeriksa, memperbaiki, dan merawat komputer."
+  }
+];
+
+function loadQuiz() {
+  const form = document.getElementById('quizForm');
+  form.innerHTML = questions.map((q,i) => `
+    <div class="question">
+      <b>${i+1}. ${q.q}</b>
+      ${q.a.map((a,j)=>`
+        <label>
+          <input type="radio" name="q${i}" value="${j}">
+          ${String.fromCharCode(65+j)}. ${a}
+        </label>
+      `).join('')}
+    </div>
+  `).join('');
+  document.getElementById('result').style.display='none';
+}
+
+function checkAnswer() {
+  let score=0;
+  let detail='';
+  let unanswered=0;
+
+  questions.forEach((q,i)=>{
+    const selected=document.querySelector(`input[name="q${i}"]:checked`);
+    if(!selected) unanswered++;
+    else if(Number(selected.value)===q.c) score++;
+
+    detail+=`<p><b>${i+1}. ${q.c===Number(selected?.value) && selected ? '✅ Benar':'❌ Salah'}</b><br>
+    Jawaban: ${q.a[q.c]}<br>${q.e}</p>`;
+  });
+
+  if(unanswered>0) {
+    alert('Masih ada '+unanswered+' soal yang belum dijawab!');
+    return;
+  }
+
+  const nilai=score*10;
+  const result=document.getElementById('result');
+  result.style.display='block';
+  result.innerHTML=`
+    <h2>Hasil Kuis</h2>
+    <h1>${nilai}/100</h1>
+    <p>Jawaban benar: ${score} dari 10 soal.</p>
+    <h3>Pembahasan:</h3>
+    ${detail}
+  `;
+  result.scrollIntoView({behavior:'smooth'});
+}
+
+function resetQuiz() {
+  loadQuiz();
+  window.scrollTo(0,0);
+}
+
+loadQuiz();
+</script>
+
+</body>
+</html>
